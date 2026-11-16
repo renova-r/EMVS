@@ -1,3 +1,8 @@
+# EMVS 1.2.1.9002
+
+- `src/conj_EMVS.cpp` (lines 68, 77, 135) and `src/ind_EMVS.cpp` (lines 67, 77, 124): the `direction` tests `(direction.compare(...)==0) | (direction.compare(...)==0)` now use `||` instead of the bitwise `|`. Both operands are `bool` and the right-hand comparison has no side effects, so each test gives the same result. clang 19 (Windows ARM64, Rtools 4.5) warned `use of bitwise '|' with boolean operands [-Wbitwise-instead-of-logical]` for the two line-77 tests, which `R CMD check` reported as a WARNING in "checking whether package 'EMVS' can be installed".
+- `DESCRIPTION`: `Version` set to `1.2.1.9002`.
+
 # EMVS 1.2.1.9001
 
 Renova release, based on CRAN EMVS 1.2.1 (archived on CRAN 2022-12-05).

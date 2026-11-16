@@ -2,7 +2,7 @@ Package: EMVS
 Type: Package
 Title: The Expectation-Maximization Approach to Bayesian Variable
         Selection
-Version: 1.2.1.9001
+Version: 1.2.1.9002
 Author: Veronika Rockova [aut], Gemma Moran [aut, cre]
 Authors@R: c(person(given = "Veronika", family = "Rockova", role = "aut"),
              person(given = "Gemma", family = "Moran", role = c("aut", "cre"),
