@@ -64,7 +64,7 @@ SEXP ind_EMVS(SEXP Y_,
 
     for(int i = 0; i < L; ++i) {
   
-      if ((direction.compare("forward")==0)|(direction.compare("null")==0)){
+      if ((direction.compare("forward")==0)||(direction.compare("null")==0)){
         v0 = v0s[i];
       } else if (direction.compare("backward")==0){
         v0=v0s[L-1-i];  
@@ -74,7 +74,7 @@ SEXP ind_EMVS(SEXP Y_,
    
       // Initialization of parameters
 
-      if ((direction.compare("forward")==0)| (direction.compare("backward")==0)) {
+      if ((direction.compare("forward")==0)|| (direction.compare("backward")==0)) {
 	     beta_k = beta_new;
 	    } else{
         beta_k = beta_init;
@@ -121,7 +121,7 @@ SEXP ind_EMVS(SEXP Y_,
       index = find(post > 0.5);
       
       // Store values:
-      if ((direction.compare("forward")==0)|(direction.compare("null")==0)){
+      if ((direction.compare("forward")==0)||(direction.compare("null")==0)){
         posts.row(i) = post.t();
         betas.row(i) = beta_new.t();
         sigmas[i] = sigma_k;

@@ -1,3 +1,8 @@
+# EMVS 1.2.2
+
+- Updated the build configuration and C++ code for compatibility with current R and compilers.
+- Compatibility fixes contributed by [Renova](https://github.com/renova-r) (Jing Jia, Guanyang Wang, and Peng Zhang).
+
 # EMVS 1.2.1 (2021-10-12)
 
 - Fixed: PI to M_PI in preparation for Rcpp change.

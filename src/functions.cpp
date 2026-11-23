@@ -138,7 +138,7 @@ double log_prior(uvec& gamma, const string &type, double a, double b, int n){
     res = log(beta(x,y)) - log(beta(a,b));
     
     // Stirling approximation:
-    if(!is_finite(res)){
+    if(!std::isfinite(res)){
       res = 0.5*log(2*M_PI)+(x-0.5)*log(x)+(y-0.5)*log(y)-(x+y-0.5)*log(x+y);
     }
     
